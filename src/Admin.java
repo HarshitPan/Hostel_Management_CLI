@@ -98,7 +98,7 @@ class Hostel_Manager
             return;
         }
         rs=stml.executeQuery("select * from "+username+";");
-        int max=15;
+        int max=20;
         print_gap("Student_ID",max);
         System.out.print("Student_ID");
         print_gap("Student_Name", max);
@@ -123,6 +123,8 @@ class Hostel_Manager
     {
         Class.forName("com.mysql.cj.jdbc.Driver");
         Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/hostel_management", "harshit", "Harsh@9977");
+        // This connection con is based on my local database change it as per your requirement;
+        // first paramenter is database with location, second one is username for mysql and last one is Password using that username.
         Statement stml=con.createStatement();
         System.out.print("Enter updated no of seats ->");
         int new_seats=Main.sc.nextInt();
@@ -302,7 +304,7 @@ public class Admin extends Hostel_Manager{
             return;
         }
         rs=stml.executeQuery("select * from hostel_details;");
-        int max=15;
+        int max=20;
         print_gap("Hostel",max);
         System.out.print("Hostel");
         print_gap("Remaining", max);
