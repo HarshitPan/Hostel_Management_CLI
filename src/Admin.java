@@ -123,8 +123,6 @@ class Hostel_Manager
     {
         Class.forName("com.mysql.cj.jdbc.Driver");
         Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/hostel_management", "harshit", "Harsh@9977");
-        // This connection con is based on my local database change it as per your requirement;
-        // first paramenter is database with location, second one is username for mysql and last one is Password using that username.
         Statement stml=con.createStatement();
         System.out.print("Enter updated no of seats ->");
         int new_seats=Main.sc.nextInt();
@@ -391,7 +389,7 @@ public class Admin extends Hostel_Manager{
                     obj.remove_hostel();
                     break;
                 case 3:
-                    obj.change_password("admin000");
+                    obj.change_password("yourspace");
                     break;
                 case 4:
                     String username=getUser();

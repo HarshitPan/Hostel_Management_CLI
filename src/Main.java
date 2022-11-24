@@ -23,7 +23,7 @@ public class Main {
                 if(!rs.next()) System.out.println("No Hostel Found. Try Again...");
                 else 
                 {
-                    if(username.equals("harshit"))
+                    if(username.equals("yourspace"))
                     {
                         if(password.equals(rs.getString(1)))
                         {
