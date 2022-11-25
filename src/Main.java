@@ -6,7 +6,7 @@ public class Main {
     static Scanner sc=new Scanner(System.in);
     public static void main(String[] args) throws Exception {
         try
-        {
+        { 
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/hostel_management", "harshit", "Harsh@9977");
             Statement stml=con.createStatement();

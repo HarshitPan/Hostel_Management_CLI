@@ -134,7 +134,7 @@ class Hostel_Manager
             System.out.println("Update can't be applied...");
             return;
         }
-        int remaining=rs.getInt(1) + (new_seats-rs.getInt(2));
+        int remaining=new_seats - (rs.getInt(2)-rs.getInt(1));
         stml.executeUpdate("update hostel_details set Total_Seats = "+new_seats+" where Hostel_Code = '"+username+"';");
         stml.executeUpdate("update hostel_details set Remaining_Seats = "+remaining+" where Hostel_Code = '"+username+"';");
         System.out.println("Changes Applied...");
